@@ -1,5 +1,4 @@
 Flask
 gunicorn
 Jinja2
-scipy
-sklearn
+sklearn: 1.0.2
