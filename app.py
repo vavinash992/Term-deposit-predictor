@@ -13,7 +13,7 @@ def decompress_pickle(file):
  return data
  
 @app.route("/")
-def home():
+def h():
     return render_template("index.html")
 
 @app.route("/model/<string:age>/<string:maritalstatus>/<string:education>/<string:balance>/<string:houseloan>/<string:prevloan>/<string:contact>/<string:day>/<string:month>/<string:job>/<string:duration>/<string:cper>/<string:poutcome>")
