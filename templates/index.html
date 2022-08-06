@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ML</title>
+  <link rel=stylesheet type=text/css href="/static/style.css" />
+</head>
+<body >
+  <form action="/action" method="POST">
+  <center >
+    
+    <br>
+    <br>
+    <b><b >Age: </b> &nbsp
+    <input type="number" name="age" value="" min="0" max="100" class="box" required> 
+    <br><br><br>
+    <b>Marital status:</b> &nbsp
+      <input type="radio" id="Married" name="maritalstatus" value="1.0" checked="checked">
+      <label for="Married">Married</label>
+      <input type="radio" id="single" name="maritalstatus" value="2.0">
+      <label for="single">Single</label>
+      <input type="radio" id="divorced" name="maritalstatus" value="0.0">
+      <label for="divorced">Divorced</label>
+    <br><br><br>
+
+    <b>Education: </b> &nbsp
+    <select name="education" class="classic" required>
+      <option value="3.0">Unknown</option>
+      <option value="0.0">Primary</option>
+      <option value="1.0">Secondary</option>
+      <option value="2.0">Teritary</option>
+    </select>
+    <br><br><br>
+    
+    <b>Balance: </b> &nbsp<input type="number" value="" class="box" name="Balance" required>
+    <br><br><br>
+    
+    <b>Has housing loan?</b> &nbsp
+      <input type="radio" id="Yes" name="loan" value="1.0" checked="checked">
+      <label for="Yes">Yes</label>
+      <input type="radio" id="No" name="loan" value="0.0">
+      <label for="No">No</label>
+    <br><br><br>
+
+    <b>Previous loan: </b> &nbsp
+      <input type="radio" id="Yes" name="prevloan" value="1.0" checked="checked">
+      <label for="Yes">Yes</label>
+      <input type="radio" id="No" name="prevloan" value="0.0">
+      <label for="No">No</label>
+    <br><br><br>
+
+    <b>Contact: </b> &nbsp
+    <select name="contact" class="classic" required>
+      <option value="2.0">Unknown</option>
+      <option value="0.0">cellular</option>
+      <option value="1.0">Telephone</option>
+    </select>
+    <br><br><br>
+
+
+    <b>Last contact day of the week: </b> &nbsp<input name="day" type="number" value="" class="box" required><br><br><br>
+ 
+
+    <b>Last contact month of year: </b> &nbsp<select  name="month" class="classic" required>
+      <option value="4.0">january</option>
+      <option value="3.0">february</option>
+      <option value="7.0">march</option>
+      <option value="0.0">april</option>
+      <option value="8.0">may</option>
+      <option value="6.0">june</option>
+      <option value="5.0">july</option>
+      <option value="1.0">august</option>
+      <option value="11.0">september</option>
+      <option value="10.0">october</option>
+      <option value="9.0">november</option>
+      <option value="2.0">december</option>
+    </select>
+    <br><br><br>
+
+    <b>Job: </b> &nbsp<select  name="job" class="classic" required>
+      <option value="4.0">management</option>
+      <option value="9.0">technecian</option>
+      <option value="2.0">entrepenuer</option>
+      <option value="1.0">blue-collar</option>
+      <option value="11.0">Unknown</option>
+      <option value="5.0">retired</option>
+      <option value="0.0">admin</option>
+      <option value="7.0">services</option>
+      <option value="6.0">self-employed</option>
+      <option value="10.0">unemployed</option>
+      <option value="3.0">housemaid</option>
+      <option value="8.0">student</option>
+    </select>   
+    <br><br><br>
+
+    <b>Last contact duration, in seconds: </b> &nbsp<input type="number" name="duration" value="" class="box" required>
+    <br><br><br>
+
+   <b> number of contacts performed during this campaign for this client: </b> &nbsp<input type="number" name="cper" value="" class="box" required>
+    <br><br><br>
+
+
+   <b> Previous outcome: </b> &nbsp
+    <select  name="poutcome" class="classic" required>
+      <option value="3.0">Unknown</option>
+      <option value="0.0">Failure</option>
+      <option value="1.0">Other</option>
+      <option value="2.0">Success</option>
+    </select><br><br><br>
+
+    <input type="submit">
+  </center>
+</form>
+</body>
+</html>
