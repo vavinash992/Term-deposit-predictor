@@ -3,6 +3,7 @@ from flask import Flask,redirect, request,url_for,render_template
 import bz2
 import pickle
 import _pickle as cPickle
+
 app=Flask(__name__)
 
 import pickle
@@ -12,7 +13,7 @@ def decompress_pickle(file):
  return data
  
 @app.route("/")
-def welcome():
+def home():
     return render_template("index.html")
 
 @app.route("/model/<string:age>/<string:maritalstatus>/<string:education>/<string:balance>/<string:houseloan>/<string:prevloan>/<string:contact>/<string:day>/<string:month>/<string:job>/<string:duration>/<string:cper>/<string:poutcome>")
