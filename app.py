@@ -1,12 +1,9 @@
 from email import message
 from flask import Flask,redirect, request,url_for,render_template
 import bz2
+import pickle
 
 app=Flask(__name__)
-
-
-from joblib import Parallel, delayed
-import joblib
  
 @app.route("/")
 def home():
@@ -14,7 +11,8 @@ def home():
 
 @app.route("/model/<string:age>/<string:maritalstatus>/<string:education>/<string:balance>/<string:houseloan>/<string:prevloan>/<string:contact>/<string:day>/<string:month>/<string:job>/<string:duration>/<string:cper>/<string:poutcome>")
 def model(age,maritalstatus,education,balance,houseloan,prevloan,contact,day,month,job,duration,cper,poutcome):
-    data = joblib.load('filename.pkl')
+    with open('filename.pkl', 'rb') as f:
+        data = pickle.load(f)
     [k]=data.predict([[float(age),float(job),float(maritalstatus),float(education),float(balance),float(houseloan),float(prevloan),float(contact),float(day),float(month),float(duration),float(cper),float(poutcome)]])
     if k==0.0:
         ke="The person won't take a loan"
