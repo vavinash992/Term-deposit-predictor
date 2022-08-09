@@ -1,8 +1,6 @@
 from email import message
 from flask import Flask,redirect, request,url_for,render_template
 import bz2
-import pickle
-import _pickle as cPickle
 
 app=Flask(__name__)
 
